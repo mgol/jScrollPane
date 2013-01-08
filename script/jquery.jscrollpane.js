@@ -184,14 +184,12 @@
 
 					container.append(
 						$('<div class="jspVerticalBar" />').append(
-							$('<div class="jspCap jspCapTop" />'),
 							$('<div class="jspTrack" />').append(
 								$('<div class="jspDrag" />').append(
 									$('<div class="jspDragTop" />'),
 									$('<div class="jspDragBottom" />')
 								)
-							),
-							$('<div class="jspCap jspCapBottom" />')
+							)
 						)
 					);
 
@@ -215,7 +213,7 @@
 					}
 
 					verticalTrackHeight = paneHeight;
-					container.find('>.jspVerticalBar>.jspCap:visible,>.jspVerticalBar>.jspArrow').each(
+					container.find('>.jspVerticalBar>.jspArrow').each(
 						function()
 						{
 							verticalTrackHeight -= $(this).outerHeight();
@@ -282,14 +280,12 @@
 
 					container.append(
 						$('<div class="jspHorizontalBar" />').append(
-							$('<div class="jspCap jspCapLeft" />'),
 							$('<div class="jspTrack" />').append(
 								$('<div class="jspDrag" />').append(
 									$('<div class="jspDragLeft" />'),
 									$('<div class="jspDragRight" />')
 								)
-							),
-							$('<div class="jspCap jspCapRight" />')
+							)
 						)
 					);
 
@@ -348,7 +344,7 @@
 
 			function sizeHorizontalScrollbar()
 			{
-				container.find('>.jspHorizontalBar>.jspCap:visible,>.jspHorizontalBar>.jspArrow').each(
+				container.find('>.jspHorizontalBar>.jspArrow').each(
 					function()
 					{
 						horizontalTrackWidth -= $(this).outerWidth();
@@ -365,7 +361,7 @@
 					var horizontalTrackHeight = horizontalTrack.outerHeight(),
 						verticalTrackWidth = verticalTrack.outerWidth();
 					verticalTrackHeight -= horizontalTrackHeight;
-					$(horizontalBar).find('>.jspCap:visible,>.jspArrow').each(
+					$(horizontalBar).find('>.jspArrow').each(
 						function()
 						{
 							horizontalTrackWidth += $(this).outerWidth();
